@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kamalnath K | Python, AWS and DevOps</title>
+<meta name="description" content="Portfolio of Kamalnath K, Computer Science graduate from Anna University (CEG) skilled in Python, AWS, Terraform and full-stack development.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <a class="brand" href="#home">Kamalnath K</a>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+  <nav id="menu" class="menu" aria-label="Main">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a>
+    <button class="theme" id="theme" aria-label="Toggle dark mode">◐</button>
+  </nav>
+</header>
+<main id="main">
+<section class="hero" id="home">
+  <div class="hero-text">
+    <p class="hello">Computer Science graduate</p>
+    <h1>Kamalnath K</h1>
+    <p class="role">I work with <span class="rot" id="rot" aria-live="off">AWS</span></p>
+    <p class="sub">Python, cloud and full-stack projects, from machine learning to inventory systems.</p>
+    <div class="cta">
+      <a class="btn primary" href="assets/Kamalnath_K_Resume.pdf" download>Download resume</a>
+      <a class="btn" href="#projects">See projects</a>
+      <a class="btn ghost" href="https://github.com/KAMAL4264" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/kamalnath-gk-2004-/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </div>
+  <aside class="card-id" aria-label="Quick facts">
+    <div class="avatar" aria-hidden="true">K</div>
+    <dl>
+      <div><dt>Degree</dt><dd>B.E. Computer Science and Engineering</dd></div>
+      <div><dt>University</dt><dd>Anna University (CEG), Chennai</dd></div>
+      <div><dt>CGPA</dt><dd>7.53</dd></div>
+      <div><dt>Certified</dt><dd>AWS Cloud Foundations</dd></div>
+    </dl>
+    <span class="float f1">AWS</span><span class="float f2">Terraform</span><span class="float f3">Python</span><span class="float f4">PostgreSQL</span>
+  </aside>
+</section>
+
+<div class="band" id="about"><section>
+  <h2>About me</h2>
+  <p class="lead">Computer Science graduate with a keen interest in applying foundational knowledge to real-world challenges. I look for an environment that fosters learning and lets me contribute to the growth of the organization and myself.</p>
+</section></div>
+
+<section id="skills">
+  <h2>Technical skills</h2>
+  <div class="feature">
+    <article class="tile t1"><h3>Cloud</h3><ul><li>AWS: EC2, ELB, IAM</li><li>GCP: Basics</li></ul></article>
+    <article class="tile t2"><h3>DevOps &amp; Tools</h3><ul><li>Git</li><li>SSH (PuTTY)</li><li>Terraform</li></ul></article>
+    <article class="tile t3"><h3>Programming</h3><ul><li>Python</li><li>Java</li></ul></article>
+  </div>
+  <div class="chips-grid">
+    <div><h3>Frameworks &amp; Technologies</h3><ul class="chips"><li>ReactJS</li><li>ExpressJS</li><li>Flask</li></ul></div>
+    <div><h3>Databases</h3><ul class="chips"><li>PostgreSQL</li><li>MongoDB</li></ul></div>
+    <div><h3>Soft skills</h3><ul class="chips"><li>Teamwork</li><li>Time Management</li><li>Adaptability</li><li>Crowd Management</li></ul></div>
+  </div>
+</section>
+
+<div class="band" id="projects"><section>
+  <h2>Projects</h2>
+  <div class="tabs">
+    <div class="tablist" role="tablist" aria-label="Projects">
+      <button role="tab" id="tab0" aria-controls="panel0" aria-selected="true"><small>Apr 2026</small>Sign Language Recognition</button>
+      <button role="tab" id="tab1" aria-controls="panel1" aria-selected="false" tabindex="-1"><small>Sep 2025</small>Osteoporosis Prediction</button>
+      <button role="tab" id="tab2" aria-controls="panel2" aria-selected="false" tabindex="-1"><small>Apr 2024</small>Order &amp; Inventory System</button>
+    </div>
+    <div class="panels">
+      <article role="tabpanel" id="panel0" aria-labelledby="tab0">
+        <h3>Continuous Sign Language Recognition and Cross-Sign Conversion</h3>
+        <ul>
+          <li>Recognizes continuous Indian Sign Language (ISL) and converts it into text for better communication with non-signers, using Bi-LSTM.</li>
+          <li>Uses Huffman-based segmentation, MediaPipe keypoint extraction and Bi-LSTM sequence modeling.</li>
+          <li>Converts ISL gestures into other sign languages through Transformer-based sentence generation and 3D avatar-based cross-sign translation.</li>
+        </ul>
+        <ul class="chips"><li>Python</li><li>MediaPipe</li><li>Three.js</li><li>Flask</li></ul>
+      </article>
+      <article role="tabpanel" id="panel1" aria-labelledby="tab1" hidden>
+        <h3>Osteoporosis Prediction System</h3>
+        <ul>
+          <li>Machine learning system that predicts osteoporosis risk from clinical and ultrasound-based features.</li>
+          <li>Applied data preprocessing, feature selection and ensemble techniques to improve prediction performance.</li>
+          <li>Achieved 97% binary prediction accuracy and 92% multi-class accuracy.</li>
+        </ul>
+        <ul class="chips"><li>Python</li><li>Streamlit</li><li>pandas</li></ul>
+      </article>
+      <article role="tabpanel" id="panel2" aria-labelledby="tab2" hidden>
+        <h3>Order and Inventory Management System</h3>
+        <ul>
+          <li>E-commerce web app that manages inventory and streamlines ordering and billing.</li>
+          <li>Designed a relational database for products, customers, orders, inventory and billing for a retail shop.</li>
+          <li>Enabled real-time purchase, cart management and order processing, reducing manual effort by 70%.</li>
+        </ul>
+        <ul class="chips"><li>ReactJS</li><li>ExpressJS</li><li>PostgreSQL</li></ul>
+      </article>
+    </div>
+  </div>
+  <p class="note">More code on <a href="https://github.com/KAMAL4264" target="_blank" rel="noopener noreferrer">my GitHub profile</a>.</p>
+</section></div>
+
+<section id="education">
+  <h2>Education</h2>
+  <ol class="timeline">
+    <li><time>Oct 2022 – Apr 2026</time><h3>B.E. Computer Science and Engineering</h3><p>Anna University (CEG), Chennai</p><span class="score">CGPA 7.53</span></li>
+    <li><time>Jun 2021 – Jun 2022</time><h3>Higher Secondary Education</h3><p>Gokilambal Hr Sec School, Ariyalur</p><span class="score">97.1%</span></li>
+    <li><time>Jun 2019 – Jun 2020</time><h3>Secondary Education</h3><p>Gokilambal Hr Sec School, Ariyalur</p><span class="score">93.4%</span></li>
+  </ol>
+</section>
+
+<div class="band" id="certifications"><section>
+  <h2>Certifications</h2>
+  <div class="certs">
+    <article><h3>AWS Cloud Foundations</h3><p>Amazon Academy</p></article>
+    <article><h3>Data Analytics by Google</h3><p>TN Upskilling (InGage)</p></article>
+  </div>
+  <h2 class="sub">Positions of responsibility</h2>
+  <ul class="roles">
+    <li><time>Mar 2025 – Present</time><h3>Organiser, Students Association and Arts Society (SAAS)</h3><p>Contributed to organizing CEG’s ’24 Cultural Event in collaboration with Zebronics and Krafton.</p></li>
+    <li><time>Sep 2024 – Apr 2025</time><h3>HR Coordinator, CEG Tech Forum (CTF)</h3><p>Contributed to the development of the Kurukshetra tech fest and assisted in volunteer onboarding.</p></li>
+  </ul>
+</section></div>
+
+<div class="dark" id="contact"><section>
+  <h2>Let’s talk</h2>
+  <p class="lead">Open to opportunities. Email is the quickest way to reach me.</p>
+  <div class="contact">
+    <a class="btn primary" href="mailto:kamalnath4264@gmail.com">kamalnath4264@gmail.com</a>
+    <button class="btn" id="copy" type="button">Copy email</button>
+    <a class="btn" href="tel:+916381783261">+91 63817 83261</a>
+    <a class="btn" href="https://github.com/KAMAL4264" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a class="btn" href="https://www.linkedin.com/in/kamalnath-gk-2004-/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a class="btn" href="assets/Kamalnath_K_Resume.pdf" download>Resume (PDF)</a>
+  </div>
+  <p class="status" id="status" role="status"></p>
+</section></div>
+</main>
+<footer><p>© <span id="yr"></span> Kamalnath K</p><a href="#home">Back to top</a></footer>
+<script src="script.js"></script>
+</body>
+</html>
