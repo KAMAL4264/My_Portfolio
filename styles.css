@@ -27,3 +27,37 @@ footer{border-color:#303c56;color:#aebbd3}footer a{color:#eaf0ff}.footer-brand s
 ::selection{background:#4b82e8;color:#fff}
 a:focus-visible,button:focus-visible{outline:3px solid #ffd166;outline-offset:4px}
 @media(max-width:700px){.nav-links a,.resume-btn{background:#121b31;color:#f4f7ff;border-color:#7189b8}.education-strip{color:#f4f7ff}}
+
+/* Dark-first readability pass: stronger contrast and larger typography */
+:root{--ink:#f4f7ff;--paper:#0a0f1e;--blue:#3988ff;--yellow:#ffd166;--mint:#45e0b0;--line:#35425e;--shadow:7px 8px 0 #02040b}
+html,body{background-color:#0a0f1e;color:#f4f7ff}
+body{background:radial-gradient(ellipse at 12% 8%,#1b2d54 0%,transparent 38%),radial-gradient(ellipse at 88% 25%,#241943 0%,transparent 35%),linear-gradient(145deg,#080c17 0%,#0c1428 54%,#10172b 100%);color:#f4f7ff}
+.grid-bg{background-image:linear-gradient(#9bb4ff18 1px,transparent 1px),linear-gradient(90deg,#9bb4ff18 1px,transparent 1px);background-size:48px 48px}
+.mark,.nav-links a,.resume-btn,.button,.reset-view{background:#141f37;color:#fff;border-color:#91a9d9;box-shadow:4px 5px 0 #02040b}
+.hero h1,.section h2,.contact-intro h2{color:#fff}
+.outline-word{color:transparent;-webkit-text-stroke:2px #f5f7ff}
+.hero-sub,.about-card p,.skills-heading p,.projects-heading p,.skills-footnote,.contact-intro p,.project-body p,.timeline-card p,.mini-paper p{color:#d0d9ed}
+.tiny-label,.section-kicker,.project-meta,.skills-board-title,.project-footer,.mini-paper>span,.mini-bottom,.contact-card small,footer,.availability,.scroll-cue,.timeline-date{color:#b9c8e4}
+.paper-card,.about-card,.skills-board,.project-card,.timeline-card,.mini-paper{background:linear-gradient(145deg,#182440,#111a30);color:#f4f7ff;border-color:#8198c4;box-shadow:var(--shadow)}
+.about-card p strong,.about-stats strong,.project-body h3,.skill-group h3,.education-strip strong{color:#fff}
+.about-stats span,.education-strip span,.education-strip small{color:#c5d2e8}
+.education-strip{background:linear-gradient(110deg,#123d3a,#182440);border-color:#8198c4;box-shadow:5px 6px 0 #02040b}
+.strip-icon,.skill-group,.contact-card{background:#121d34;color:#f4f7ff;border-color:#8198c4}
+.chips span,.project-tags span{background:#24324e;border-color:#526789;color:#f5f7ff}
+.monitor{background:#182440;border-color:#9db7e8}.monitor:before{border-color:#53658a}.monitor span{background:#1b365a;color:#9bcaff}.m2 span{background:#123f3c}.desk{background:#7b4b36;border-color:#91a9d9}.person i{background:#253d5a;border-color:#91a9d9}.floating-tag{background:#243451;color:#fff;border-color:#a5bbeb}.tag-one{background:#785b1c;color:#fff}.tag-two{background:#145d52;color:#eafff8}
+.orbit-preview{background:linear-gradient(145deg,#1a2540,#10172b);border-color:#9db7e8}.orbit-core,.orbit-icon{background:#1b2944;color:#f5f7ff;border-color:#9db7e8}
+.contact-board{background:radial-gradient(#7189b333 1px,transparent 1px),linear-gradient(135deg,#202c49,#141d33 65%,#201b3d);background-size:9px 9px;border-color:#8198c4}.contact-title,.contact-card{background:#121d34;color:#fff;border-color:#91a9d9}.contact-card small{color:#c4d2eb}footer{border-color:#303c56}footer a{color:#fff}.reset-view{background:#17223b;color:#fff;border-color:#91a9d9}
+/* Increase small labels and body copy for comfortable reading */
+.hero-sub{font-size:clamp(19px,1.8vw,23px);max-width:540px}
+.tiny-label,.section-kicker,.project-meta,.skills-board-title,.project-footer,.mini-paper>span,.mini-bottom,.contact-card small,footer,.availability{font-size:12px}
+.nav-links a,.resume-btn{font-size:14px}
+.button,.text-link{font-size:14px}
+.about-card p,.skills-heading p,.projects-heading p,.project-body p,.timeline-card p,.mini-paper p,.contact-intro p{font-size:16px;line-height:1.75}
+.about-card p{font-size:17px}
+.about-stats span,.education-strip span,.education-strip small{font-size:11px}
+.education-strip strong{font-size:17px}
+.skill-group h3{font-size:17px}.chips span,.project-tags span{font-size:12px;padding:7px 10px}
+.project-body h3{font-size:clamp(23px,2.2vw,30px)}
+.timeline-card h3{font-size:18px}.timeline-card p{font-size:15px}
+.contact-card strong{font-size:14px}.contact-card small{font-size:11px}
+@media(max-width:700px){.hero-sub{font-size:19px}.nav-links a,.resume-btn{font-size:10px}.about-card p,.skills-heading p,.projects-heading p,.project-body p,.timeline-card p,.mini-paper p,.contact-intro p{font-size:15px}.chips span,.project-tags span{font-size:11px}}
