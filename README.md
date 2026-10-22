@@ -70,12 +70,7 @@ I enjoy building practical applications using Python, Java, web technologies and
       <p><b>Tech:</b></p>
       <code>ReactJS</code> <code>ExpressJS</code> <code>PostgreSQL</code>
     </td>
-    <td width="50%" valign="top">
-      <h3>🌐 <a href="https://github.com/KAMAL4264/My_Portfolio">My Portfolio</a></h3>
-      <p>Personal portfolio website showcasing my projects, skills and background.</p>
-      <p><b>Tech:</b></p>
-      <code>HTML</code> <code>CSS</code> <code>JavaScript</code>
-    </td>
+    
   </tr>
 </table>
 
