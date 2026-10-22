@@ -71,3 +71,18 @@ body{font-size:16px;line-height:1.75}
   .footer{font-size:9px}
 }
 @media(max-width:370px){.chips span{font-size:9px}}
+
+/* Slightly deeper palette for a softer, less bright page. */
+:root{--paper:#efede6;--ink:#141c2d;--muted:#555d69;--line:#d2d0c7;--orange:#e96f48;--yellow:#e8bd48;--mint:#79bda8;--blue:#a9c5d8;--white:#f9f8f3}
+.skills,.journey{background:#e5e3db}
+.skill-card:nth-child(1){background:#cfe0d6}
+.skill-card:nth-child(2){background:#ecd4bf}
+.skill-card:nth-child(3){background:#d9dceb}
+.skill-card:nth-child(4){background:#e9dda7}
+.skill-card:nth-child(5){background:#d0e0e3}
+.skill-card:nth-child(6){background:#e7d2ca}
+.sign-visual{background:#d0dfd6}
+.health-visual{background:#dcdae8}
+.store-visual{background:#eadbb7}
+.project-info p,.about-copy,.timeline-item p,.cert-card p,.leadership-item p,.contact-copy p{color:#515965}
+.section-kicker,.eyebrow,.hero-note,.skills-heading p,.projects-heading p,.journey-intro,.timeline-date,.footer{color:#666b73}
