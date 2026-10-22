@@ -14,11 +14,21 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="intro-screen is-active" id="intro-screen" aria-label="Portfolio loading">
+    <div class="intro-orbit intro-orbit-one"></div><div class="intro-orbit intro-orbit-two"></div>
+    <div class="intro-window">
+      <div class="intro-window-bar"><span>−</span><span>×</span><div class="intro-window-dots"><i></i><i></i><i></i></div></div>
+      <div class="intro-window-body"><span class="intro-star intro-star-left">✦</span><span class="intro-star intro-star-right">✦</span><h2>Portfolio</h2><div class="intro-bottom"><div class="intro-status"><span>KAMALNATH K</span><span>LOADING...</span></div><div class="intro-progress"><span></span></div></div></div>
+    </div>
+    <span class="intro-dot intro-dot-one"></span><span class="intro-dot intro-dot-two"></span>
+    <button class="intro-skip" type="button">Skip intro <span aria-hidden="true">↗</span></button>
+  </div>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Kamalnath K home"><span class="brand-mark">K</span><span>Kamalnath <span class="brand-last">K</span></span></a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span></button>
     <nav id="site-nav" class="site-nav" aria-label="Main navigation">
       <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
+      <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme"><span class="theme-icon" aria-hidden="true">◐</span><span class="theme-label">Dark</span></button>
       <a class="nav-resume" href="assets/Kamal_K_Resume.pdf" download>↓ <span>Resume</span></a>
     </nav>
   </header>
