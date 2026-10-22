@@ -1,56 +1,49 @@
 (() => {
-  const toggle = document.getElementById('menuToggle');
-  const nav = document.getElementById('navLinks');
-  const progress = document.getElementById('progress');
-  const year = document.getElementById('year');
-  if (year) year.textContent = new Date().getFullYear();
-
-  if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      const open = toggle.getAttribute('aria-expanded') !== 'true';
-      toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      nav.classList.toggle('open', open);
-    });
-    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      nav.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.setAttribute('aria-label', 'Open menu');
-    }));
-    document.addEventListener('click', e => {
-      if (!nav.contains(e.target) && !toggle.contains(e.target)) {
-        nav.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
+  const reset = document.getElementById('resetView');
+  const toast = document.getElementById('toast');
+  let toastTimer;
+  function notify(message) {
+    toast.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 1800);
+  }
+  // Lightweight tilt interaction echoes the reference's draggable/explorable workspace.
+  const tiltCards = [...document.querySelectorAll('.tilt-card')];
+  const canTilt = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+  if (canTilt) {
+    tiltCards.forEach(card => {
+      card.addEventListener('pointermove', event => {
+        const r = card.getBoundingClientRect();
+        const x = (event.clientX - r.left) / r.width - .5;
+        const y = (event.clientY - r.top) / r.height - .5;
+        card.style.transform = `perspective(900px) rotateX(${(-y * 2.2).toFixed(2)}deg) rotateY(${(x * 2.2).toFixed(2)}deg) translateY(-2px)`;
+      });
+      card.addEventListener('pointerleave', () => { card.style.transform = ''; });
     });
   }
-
-  const updateProgress = () => {
-    const max = document.documentElement.scrollHeight - window.innerHeight;
-    if (progress) progress.style.width = `${max > 0 ? (window.scrollY / max) * 100 : 0}%`;
-  };
-  window.addEventListener('scroll', updateProgress, {passive:true});
-  updateProgress();
-
-  const items = document.querySelectorAll('.section-top, .section-title-row, .about-copy, .about-board, .case-card, .toolkit-card, .journey-item, .credential-board, .leadership-board, .contact-card, .contact-title, .contact-bottom');
-  items.forEach(el => el.classList.add('reveal'));
+  // Navigation feedback, similar to the small "area discovered" notification in the reference.
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      const name = link.textContent.trim().toLowerCase().replace(/^./, c => c.toUpperCase());
+      notify(`${name} section discovered`);
+    });
+  });
+  reset.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.querySelectorAll('.tilt-card').forEach(card => card.style.transform = '');
+    notify('View reset · back to the beginning');
+  });
+  // Show current section in the browser title for assistive context and a subtle active state.
+  const navLinks = [...document.querySelectorAll('.nav-links a')];
+  const sections = navLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(link => link.classList.toggle('active', link.hash === `#${entry.target.id}`));
       });
-    }, {threshold:0.1});
-    items.forEach(el => observer.observe(el));
-  } else {
-    items.forEach(el => el.classList.add('visible'));
-  }
-
-  const greeting = document.getElementById('greeting');
-  if (greeting) {
-    const hour = new Date().getHours();
-    greeting.textContent = hour < 12 ? 'Good morning,' : hour < 18 ? 'Good afternoon,' : 'Good evening,';
+    }, { rootMargin: '-25% 0px -60% 0px' });
+    sections.forEach(section => observer.observe(section));
   }
 })();
