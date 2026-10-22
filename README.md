@@ -64,13 +64,12 @@ I enjoy building practical applications using Python, Java, web technologies and
     </td>
   </tr>
   <tr>
-    <td width="50%" valign="top">
+    <td colspan="2" valign="top">
       <h3>🛒 <a href="https://github.com/KAMAL4264/REPO-NAME-3">Order & Inventory Management</a></h3>
       <p>E-commerce application to manage inventory, orders and billing, with cart management and order processing.</p>
       <p><b>Tech:</b></p>
       <code>ReactJS</code> <code>ExpressJS</code> <code>PostgreSQL</code>
     </td>
-    
   </tr>
 </table>
 
